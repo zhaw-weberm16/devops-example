@@ -1,7 +1,7 @@
 {
-  "name": "path-example",
+  "name": "devops-example",
   "version": "0.2.15",
-  "description": "Path Application Framework Example",
+  "description": "DevOps Example",
   "keywords": [
     "GUI",
     "JSON",
@@ -9,9 +9,9 @@
     "Rapid Application Development",
     "Rapid Application Manufacturing"
   ],
-  "homepage": "https://github.com/innovad/path-example/",
+  "homepage": "https://github.com/innovad/devops-example/",
   "bugs": {
-    "url": "https://github.com/innovad/path-example/issues"
+    "url": "https://github.com/innovad/devops-example/issues"
   },
   "license": "LGPL-3.0",
   "author": {
@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/innovad/path-example.git"
+    "url": "https://github.com/innovad/devops-example.git"
   },
   "engines": {
     "node": "7.10.1",
