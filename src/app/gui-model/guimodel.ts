@@ -2,7 +2,7 @@ export class GuiModel {
 
     private _guiModel = {
         "application": {
-            "title": "DevOps weberm16",
+            "title": "Mein DevOps Tutorial",
             "formList": [
                 {
                     "id": "PersonForm",
