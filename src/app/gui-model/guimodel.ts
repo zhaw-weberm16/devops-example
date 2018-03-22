@@ -5,7 +5,7 @@ export class GuiModel {
             "title": "Share your Cooking Recipes",
             "formList": [
                 {
-                    "id": "PersonForm"
+                    "id": "PersonForm",
                     "title": "Person",
                     "url": "/person",
                     "formFieldList": [
