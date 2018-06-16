@@ -1,5 +1,5 @@
 import {Injectable} from "@angular/core";
-import {TranslationService} from "path-framework/app/path-framework/service/translation.service"
+import {TranslationService} from "path-framework-weberm16/app/path-framework/service/translation.service"
 
 @Injectable()
 export class ExampleTranslationService extends TranslationService {
@@ -17,79 +17,47 @@ export class ExampleTranslationService extends TranslationService {
         let languageCode: string = this.getUserLanguage();
 
         // put additional application translations here
-        if (languageCode == "de") {
+        if (languageCode == "en") {
             return {
-                "AddTask": "Task hinzufügen",
-                "Birthday": "Geburtstag",
-                "City": "Ort",
-                "Contacts": "Freunde",
-                "Company": "Firma",
-                "CompanyName": "Firma Name",
-                "Companies": "Firmen",
-                "Comments": "Kommentar",
-                "EditCompany": "Firma bearbeiten",
-                "EditPerson": "Person bearbeiten",
-                "EditTask": "Aufgabe bearbeiten",
-                "ElementTest": "Element-Test",
-                "EndDate": "Enddatum",
-                "FamilyName": "Nachname",
-                "FirstName": "Vorname",
-                "Hobbies": "Hobbys",
-                "Hobby": "Hobby",
-                "HobbyName": "Hobby Name",
-                "InlineForm": "Inline Form",
-                "NewCompany": "Neue Firma",
-                "NewHobby": "Neues Hobby",
-                "NewPerson": "Neue Person",
-                "NewProject": "Neues Projekt",
-                "NewTask": "Neue Aufgabe",
-                "Person": "Person",
-                "Project": "Projekt",
-                "Projects": "Projekte",
-                "ProjectName": "Projekt Name",
-                "StartDate": "Startdatum",
-                "Tasks": "Aufgaben",
-                "Task": "Aufgabe",
-                "TaskName": "Aufgabe Name",
-                "User": "Benutzer",
-                "www.google.com": "www.google.com"
+                "Recipes": "Recipes",
+                "Ingredients": "Ingredients",
+                "Regions": "Regions",
+                "NewRecipe": "New Recipe",
+                "RecipeName": "Recipe name",
+                "PreparationtimeInMinutes": "Preparationtime (min)",
+                "Region": "Region",
+                "Recipe": "Recipe",
+                "NewIngredient": "New Ingredient",
+                "Ingredient": "Ingredient",
+                "IngredientName": "Ingredient name",
+                "Season": "Season",
+                "CaloriesPer100g": "Calories per 100g",
+                "NewRegion": "New Region",
+                "ShowRecipe": "Show Recipe",
+                "AddIngredient": "Add Ingredient",
+                "ShowIngredient": "Show Ingredient",
+                "EditRegion": "Edit Region"
             }
         } else {
             return {
-                "AddTask": "Add Task",
-                "Birthday": "Birthday",
-                "City": "City",
-                "Contacts": "Contacts",
-                "Company": "Company",
-                "CompanyName": "Company Name",
-                "Companies": "Companies",
-                "Comments": "Comments",
-                "EditCompany": "Edit Company",
-                "EditPerson": "Edit Person",
-                "EditTask": "Edit Task",
-                "ElementTest": "Element Test",
-                "EndDate": "End date",
-                "FamilyName": "Family name",
-                "FirstName": "First name",
-                "Hobbies": "Hobbies",
-                "Hobby": "Hobby",
-                "HobbyName": "Hobby Name",
-                "InlineForm": "Inline Form",
-                "NewCompany": "New Company",
-                "NewHobby": "New Hobby",
-                "NewPerson": "New Person",
-                "NewProject": "New Project",
-                "NewTask": "New Task",
-                "Person": "Person",
-                "Project": "Project",
-                "Projects": "Projects",
-                "ProjectName": "Project Name",
-                "StartDate": "Start date",
-                "Tasks": "Tasks",
-                "Task": "Task",
-                "TaskName": "Task Name",
-                "User": "User",
-                "www.google.com": "www.google.com"
+                "Recipes": "Rezepte",
+                "Ingredients": "Zutaten",
+                "Regions": "Regionen",
+                "NewRecipe": "Neues Rezept",
+                "RecipeName": "Rezeptname",
+                "PreparationtimeInMinutes": "Zubereitungszeit (min)",
+                "Region": "Region",
+                "Recipe": "Rezept",
+                "NewIngredient": "Neue Zutat",
+                "Ingredient": "Zutat",
+                "IngredientName": "Name der Zutat",
+                "Season": "Saison",
+                "CaloriesPer100g": "Kalorien pro 100g",
+                "NewRegion": "Neue Region",
+                "ShowRecipe": "Rezept anzeigen",
+                "AddIngredient": "Zutat hinzufügen",
+                "ShowIngredient": "Zutat anzeigen",
+                "EditRegion": "Region bearbeiten"
             };
         }
     }
