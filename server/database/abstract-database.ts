@@ -90,4 +90,12 @@ export abstract class AbstractDatabase {
         return complexKey;
     }
 
+    public formatDate(dateString: string) : string {
+        let date = new Date(dateString);
+        let dd = date.getDate();
+        let mm = date.getMonth()+1;
+        let yyyy = date.getFullYear();
+        return dd + '.' + mm + '.' + yyyy;
+    }
+
 }

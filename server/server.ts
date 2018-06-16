@@ -1,15 +1,12 @@
-import {PersonDatabase} from "./database/person-database";
-import {CompanyDatabase} from "./database/company-database";
-import {TaskDatabase} from "./database/task-database";
-import {HobbyDatabase} from "./database/hobby-database";
+import {IngredientDatabase} from "./database/ingredient-database";
+import {RecipeDatabase} from "./database/recipe-database";
 import {AbstractDatabase} from "./database/abstract-database";
 import {TestData} from "./test-data";
-import {PersonRestService} from "./rest/person-rest-service";
-import {TaskRestService} from "./rest/task-rest-service";
-import {HobbyRestService} from "./rest/hobby-rest-service";
-import {CompanyRestService} from "./rest/company-rest-service";
-import {ProjectDatabase} from "./database/project-database";
-import {ProjectRestService} from "./rest/project-rest-service";
+import {IngredientRestService} from "./rest/ingredient-rest-service";
+
+import {RecipeRestService} from "./rest/recipe-rest-service";
+import {RegionDatabase} from "./database/region-database";
+import {RegionRestService} from "./rest/region-rest-service";
 import express = require('express');
 
 let bodyParser = require('body-parser');
@@ -50,21 +47,20 @@ app.get('/*',function(req,res,next) {
 
 // Path ping request
 app.get('/services/ping', function(req, res) {
-    res.json({ status: 'ok', userId : 'demo', version: '0.2.15' });
+    res.json({ status: 'ok', userId : 'demo', version: '1.0.0' });
 });
 
 // Path example entities
 AbstractDatabase.initDatabase();
-let personDatabase = new PersonDatabase();
-let projectDatabase = new ProjectDatabase();
-let companyDatabase = new CompanyDatabase();
-let hobbyDatabase = new HobbyDatabase();
-let taskDatabase = new TaskDatabase();
-new PersonRestService(app, personDatabase).init();
-new CompanyRestService(app, companyDatabase).init();
-new HobbyRestService(app, hobbyDatabase).init();
-new TaskRestService(app, taskDatabase).init();
-new ProjectRestService(app, projectDatabase).init();
+let recipeDatabase = new RecipeDatabase();
+let ingredientDatabase = new IngredientDatabase();
+let regionDatabase = new RegionDatabase();
+
+new RecipeRestService(app, recipeDatabase).init();
+new IngredientRestService(app, ingredientDatabase).init();
+new RegionRestService(app, regionDatabase).init();
+
+
 TestData.init();
 
 // set the home page route
@@ -75,5 +71,5 @@ app.get('/', function(req, res) {
 });
 
 app.listen(port, function() {
-    console.log('Path example server running on http://localhost:' + port);
+    console.log('Recipes server running on http://localhost:' + port);
 });
