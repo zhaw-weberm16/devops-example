@@ -2,330 +2,7 @@ export class GuiModel {
 
     private _guiModel = {
         "application": {
-            "title": "Share your Cooking Recipes",
-            "formList": [
-                {
-                    "id": "PersonForm",
-                    "title": "Person",
-                    "url": "/person",
-                    "formFieldList": [
-                        {
-                            "id": "familyName",
-                            "type": "text",
-                            "name": "FamilyName",
-                            "width": 1,
-                            "required": true
-                        },
-                        {
-                            "id": "firstName",
-                            "type": "text",
-                            "name": "FirstName",
-                            "width": 1,
-                            "required": true
-                        },
-                        {
-                            "id":   "company",
-                            "type": "autocomplete",
-                            "name": "Company",
-                            "wordSearchEnabled": true,
-                            "defaultKey": "companyKey",
-                            "form": "CompanyForm",
-                            "url": "/company",
-                            "width": 2
-                        },
-                        {
-                            "id": "evtBirth",
-                            "type": "date",
-                            "name": "Birthday",
-                            "width": 2
-                        },
-                        {
-                            "id": "comment",
-                            "type": "text",
-                            "name": "Comments",
-                            "width": 2,
-                            "height": 4,
-                            "maxLength": 5000,
-                        },
-                        {
-                            "type": "deleteButton",
-                            "name": "Delete"
-                        },
-                        {
-                            "type": "cancelButton",
-                            "name": "Cancel"
-                        },
-                        {
-                            "type": "okButton",
-                            "name": "Ok"
-                        }
-                    ]
-                },
-                {
-                    "id": "CompanyForm",
-                    "title": "Company",
-                    "url": "/company",
-                    "formFieldList": [
-                        {
-                            "id": "name",
-                            "type": "text",
-                            "name": "CompanyName",
-                            "width": 2,
-                            "required": true
-                        },
-                        {
-                            "id": "city",
-                            "type": "text",
-                            "name": "City",
-                            "width": 2,
-                            "required": true
-                        },
-                        {
-                            "type": "deleteButton",
-                            "name": "Delete"
-                        },
-                        {
-                            "type": "cancelButton",
-                            "name": "Cancel"
-                        },
-                        {
-                            "type": "okButton",
-                            "name": "Ok"
-                        }
-                    ]
-                },
-                {
-                    "id": "InlineTestForm",
-                    "title": "Company",
-                    "url": "/company",
-                    "borderStyle": "None",
-                    "headerVisible": false,
-                    "footerVisible": false,
-                    "formFieldList": [
-                        {
-                            "id": "name",
-                            "type": "text",
-                            "name": "CompanyName",
-                            "width": 2,
-                            "required": true
-                        },
-                        {
-                            "id": "city",
-                            "type": "text",
-                            "name": "City",
-                            "width": 2,
-                            "required": true
-                        },
-                        {
-                            "type": "okButton",
-                            "name": "Ok"
-                        }
-                    ]
-                },
-                {
-                    "id": "ProjectForm",
-                    "title": "Project",
-                    "url": "/project",
-                    "formFieldList": [
-                        {
-                            "id": "name",
-                            "type": "text",
-                            "name": "ProjectName",
-                            "width": 2,
-                            "required": true
-                        },
-                        {
-                            "id":   "company",
-                            "type": "autocomplete",
-                            "name": "Company",
-                            "wordSearchEnabled": true,
-                            "defaultKey": "companyKey",
-                            "form": "CompanyForm",
-                            "url": "/company",
-                            "width": 2,
-                            "required": true
-                        },
-                        {
-                            "id": "evtStart",
-                            "type": "date",
-                            "name": "StartDate",
-                            "width": 1
-                        },
-                        {
-                            "id": "evtEnd",
-                            "type": "date",
-                            "name": "EndDate",
-                            "width": 1
-                        },
-                        {
-                            "id": "comment",
-                            "type": "text",
-                            "name": "Comments",
-                            "width": 2,
-                            "height": 4,
-                            "maxLength": 5000,
-                        },
-                        {
-                            "type": "deleteButton",
-                            "name": "Delete"
-                        },
-                        {
-                            "type": "cancelButton",
-                            "name": "Cancel"
-                        },
-                        {
-                            "type": "okButton",
-                            "name": "Ok"
-                        }
-                    ]
-                },
-                {
-                    "id": "HobbyForm",
-                    "title": "Hobby",
-                    "url": "/hobby",
-                    "formFieldList": [
-                        {
-                            "id": "name",
-                            "type": "translation",
-                            "name": "HobbyName",
-                            "width": 2,
-                            "required": true
-                        },
-                        {
-                            "type": "deleteButton",
-                            "name": "Delete"
-                        },
-                        {
-                            "type": "cancelButton",
-                            "name": "Cancel"
-                        },
-                        {
-                            "type": "okButton",
-                            "name": "Ok"
-                        }
-                    ]
-                },
-                {
-                    "id": "TaskForm",
-                    "title": "Task",
-                    "url": "/task",
-                    "formFieldList": [
-                        {
-                            "id": "name",
-                            "type": "text",
-                            "name": "TaskName",
-                            "width": 2,
-                            "required": true
-                        },
-                        {
-                            "id":   "project",
-                            "type": "autocomplete",
-                            "name": "Project",
-                            "wordSearchEnabled": true,
-                            "defaultKey": "projectKey",
-                            "form": "ProjectForm",
-                            "url": "/project",
-                            "width": 2,
-                            "required": true
-                        },
-                        {
-                            "id": "evtStart",
-                            "type": "date",
-                            "name": "StartDate",
-                            "width": 1
-                        },
-                        {
-                            "id": "evtEnd",
-                            "type": "date",
-                            "name": "EndDate",
-                            "width": 1
-                        },
-                        {
-                            "id": "comment",
-                            "type": "text",
-                            "name": "Comments",
-                            "width": 2,
-                            "height": 4,
-                            "maxLength": 5000,
-                        },
-                        {
-                            "type": "deleteButton",
-                            "name": "Delete"
-                        },
-                        {
-                            "type": "cancelButton",
-                            "name": "Cancel"
-                        },
-                        {
-                            "type": "okButton",
-                            "name": "Ok"
-                        }
-                    ]
-                },
-                {
-                    "id": "AddTaskForm",
-                    "title": "AddTask",
-                    "url": "/person/:personKey/task",
-                    "formFieldList": [
-                        {
-                            "id": "taskKey",
-                            "type": "autocomplete",
-                            "name": "Task",
-                            "wordSearchEnabled": true,
-                            "url": "/task",
-                            "width": 2,
-                            "form": "TaskForm",
-                            "required": true,
-                            "readonly": true,
-                            "defaultKey": "taskKey"
-                        },
-                        {
-                            "id": "personKey",
-                            "type": "autocomplete",
-                            "name": "Person",
-                            "wordSearchEnabled": true,
-                            "url": "/person",
-                            "width": 2,
-                            "required": true,
-                            "readonly": true,
-                            "defaultKey": "personKey"
-                        },
-                        {
-                            "type": "deleteButton",
-                            "name": "Delete"
-                        },
-                        {
-                            "type": "cancelButton",
-                            "name": "Cancel"
-                        },
-                        {
-                            "type": "okButton",
-                            "name": "Ok"
-                        }
-                    ]
-                },
-                {
-                    "id": "UserForm",
-                    "title": "Person",
-                    "formFieldList": [
-                        {
-                            "id": "name",
-                            "type": "text",
-                            "name": "User",
-                            "width": 2,
-                            "required": true,
-                        },
-                        {
-                            "type": "cancelButton",
-                            "name": "Cancel"
-                        },
-                        {
-                            "type": "okButton",
-                            "name": "Ok"
-                        }
-                    ]
-                },
-            ],
+            "title": "Recipes",
             "pageList": [
                 {
                     "id": "mainmenu",
@@ -333,399 +10,356 @@ export class GuiModel {
                     "elementList": [
                         {
                             "type": "button",
-                            "name": "Contacts",
-                            "icon": "fa-user",
+                            "name": "Recipes",
+                            "icon": "fa-cutlery",
                             "color": "blue",
-                            "page": "contactspage",
+                            "page": "recipespage",
+                            "width": 2
                         },
                         {
                             "type": "button",
-                            "name": "Companies",
-                            "icon": "fa-industry",
-                            "color": "lime",
-                            "page": "companiespage",
-                        },
-                        {
-                            "type": "button",
-                            "name": "Projects",
-                            "icon": "fa-cubes",
-                            "color": "yellow",
-                            "page": "projectspage",
-                        },
-                        {
-                            "type": "button",
-                            "name": "Hobbies",
-                            "icon": "fa-bicycle",
+                            "name": "Ingredients",
+                            "icon": "fa-apple",
                             "color": "carrot",
-                            "page": "hobbiespage",
+                            "page": "ingredientspage",
+                            "width": 2
                         },
                         {
                             "type": "button",
-                            "name": "Tasks",
-                            "icon": "fa-tasks",
-                            "color": "wisteria",
-                            "page": "taskspage",
-                        },
-                        {
-                            "type": "button",
-                            "name": "ElementTest",
+                            "name": "Regions",
                             "icon": "fa-globe",
-                            "width": 2,
-                            "color": "asbestos",
-                            "page": "elementspage",
-                        }
-                    ]
-                },
-                {
-                    "id": "contactspage",
-                    "name": "Contacts",
-                    "elementList": [
-                        {
-                            "type": "backbutton",
-                        },
-                        {
-                            "type": "newButton",
-                            "name": "NewPerson",
-                            "icon": "fa-user",
-                            "color": "green",
-                            "form": {
-                                "form": "PersonForm"
-                            }
-                        },
-                        {
-                            "type": "list",
-                            "name": "PersonList",
-                            "icon": "fa-user",
-                            "color": "blue",
-                            "search": true,
-                            "url": "/person",
-                            "page": "personpage",
-                        },
-                    ]
-                },
-                {
-                    "id": "personpage",
-                    "name": "Person",
-                    "elementList": [
-                        {
-                            "type": "backbutton",
-                        },
-                        {
-                            "type": "button",
-                            "name": "EditPerson",
-                            "icon": "fa-user",
-                            "color": "green",
-                            "form": {
-                                "form": "PersonForm"
-                            }
-                        },
-                        {
-                            "type": "button",
-                            "name": "Hobbies",
-                            "icon": "fa-bicycle",
-                            "color": "carrot",
-                            "page": "personhobbiespage",
-                        },
-                        {
-                            "type": "button",
-                            "name": "Tasks",
-                            "icon": "fa-tasks",
-                            "color": "wisteria",
-                            "page": "persontaskspage",
-                        }
-                    ]
-                },
-                {
-                    "id": "personhobbiespage",
-                    "name": "Hobbies",
-                    "elementList": [
-                        {
-                            "type": "backbutton",
-                        },
-                        {
-                            "type": "list",
-                            "name": "HobbyList",
-                            "icon": "fa-bicycle",
-                            "color": "carrot",
-                            "search": true,
-                            "url": "/person/:personKey/hobby"
-                        },
-                    ]
-                },
-                {
-                    "id": "persontaskspage",
-                    "name": "Tasks",
-                    "elementList": [
-                        {
-                            "type": "backbutton",
-                        },
-                        {
-                            "type": "button",
-                            "name": "AddTask",
-                            "icon": "fa-tasks",
-                            "color": "green",
-                            "form": {
-                                "form": "AddTaskForm"
-                            }
-                        },
-                        {
-                            "type": "list",
-                            "name": "Tasks",
-                            "icon": "fa-tasks",
-                            "color": "wisteria",
-                            "search": true,
-                            "url": "/person/:personKey/task",
-                            "form": {
-                                "form": "AddTaskForm"
-                            }
-                        },
-                    ]
-                },
-                {
-                    "id": "companiespage",
-                    "name": "Companies",
-                    "elementList": [
-                        {
-                            "type": "backbutton",
-                        },
-                        {
-                            "type": "newButton",
-                            "name": "NewCompany",
-                            "width": 2,
-                            "icon": "fa-industry",
-                            "color": "green",
-                            "form": {
-                                "form": "CompanyForm"
-                            }
-                        },
-                        {
-                            "type": "list",
-                            "name": "CompanyList",
-                            "icon": "fa-industry",
-                            "color": "lime",
-                            "search": true,
-                            "url": "/company",
-                            "page": "companypage"
-                        },
-                    ]
-                },
-                {
-                    "id": "companypage",
-                    "name": "Company",
-                    "elementList": [
-                        {
-                            "type": "backbutton",
-                        },
-                        {
-                            "type": "button",
-                            "name": "EditCompany",
-                            "icon": "fa-industry",
-                            "color": "green",
-                            "form": {
-                                "form": "CompanyForm"
-                            }
-                        },
-                        {
-                            "type": "list",
-                            "name": "PersonList",
-                            "icon": "fa-user",
-                            "color": "blue",
-                            "search": true,
-                            "url": "/company/:companyKey/person",
-                            "form": {
-                                "form": "PersonForm"
-                            }
-                        },
-                    ]
-                },
-                {
-                    "id": "projectspage",
-                    "name": "Projects",
-                    "elementList": [
-                        {
-                            "type": "backbutton",
-                        },
-                        {
-                            "type": "newButton",
-                            "name": "NewProject",
-                            "icon": "fa-cubes",
-                            "color": "green",
-                            "form": {
-                                "form": "ProjectForm"
-                            }
-                        },
-                        {
-                            "type": "list",
-                            "name": "ProjectList",
-                            "icon": "fa-cubes",
                             "color": "yellow",
-                            "search": true,
-                            "url": "/project",
-                            "form": {
-                                "form": "ProjectForm"
-                            }
-                        },
+                            "page": "regionspage",
+                            "width": 2
+                        }
                     ]
                 },
                 {
-                    "id": "hobbiespage",
-                    "name": "Hobbies",
+                    "id": "recipespage",
+                    "name": "Recipes",
                     "elementList": [
                         {
                             "type": "backbutton",
                         },
                         {
                             "type": "newButton",
-                            "name": "NewHobby",
-                            "icon": "fa-bicycle",
-                            "color": "green",
+                            "name": "NewRecipe",
+                            "icon": "fa-cutlery",
+                            "color": "red",
+                            "width": 2,
                             "form": {
-                                "form": "HobbyForm"
+                                "form": "RecipeForm"
                             }
                         },
                         {
                             "type": "list",
-                            "name": "HobbyList",
-                            "icon": "fa-bicycle",
+                            "name": "RecipeList",
+                            "icon": "fa-cutlery",
+                            "color": "blue",
+                            "search": true,
+                            "url": "/recipe",
+                            "page": "recipepage",
+                        },
+                    ]
+                },
+                {
+                    "id": "recipepage",
+                    "name": "Recipe",
+                    "elementList": [
+                        {
+                            "type": "backbutton",
+                        },
+                        {
+                            "type": "button",
+                            "name": "ShowRecipe",
+                            "icon": "fa-cutlery",
+                            "color": "red",
+                            "width": 2,
+                            "form": {
+                                "form": "RecipeForm"
+                            }
+                        },
+                        {
+                            "type": "button",
+                            "name": "AddIngredient",
+                            "icon": "fa-apple",
+                            "color": "carrot",
+                            "width": 2,
+                            "form": {
+                                "form": "AddIngredientForm"
+                            }
+                        },
+                        {
+                            "type": "list",
+                            "name": "IngredientList",
+                            "icon": "fa-apple",
                             "color": "carrot",
                             "search": true,
-                            "url": "/hobby",
+                            "url": "/recipe/:recipeKey/ingredient",
                             "form": {
-                                "form": "HobbyForm"
+                                "form": "AddIngredientForm"
                             }
-                        },
+                        }
                     ]
                 },
                 {
-                    "id": "taskspage",
-                    "name": "Tasks",
+                    "id": "ingredientspage",
+                    "name": "Ingredients",
                     "elementList": [
                         {
                             "type": "backbutton",
                         },
                         {
                             "type": "newButton",
-                            "name": "NewTask",
-                            "icon": "fa-tasks",
-                            "color": "green",
+                            "name": "NewIngredient",
+                            "icon": "fa-apple",
+                            "color": "red",
+                            "width": 2,
                             "form": {
-                                "form": "TaskForm"
+                                "form": "IngredientForm"
                             }
                         },
                         {
                             "type": "list",
-                            "name": "TaskList",
-                            "icon": "fa-tasks",
-                            "color": "wisteria",
+                            "name": "IngredientList",
+                            "icon": "fa-apple",
+                            "color": "carrot",
                             "search": true,
-                            "url": "/task",
-                            "page": "taskpage"
-                        },
+                            "url": "/ingredient",
+                            "page": "ingredientpage"
+                        }
                     ]
                 },
                 {
-                    "id": "taskpage",
-                    "name": "Task",
+                    "id": "ingredientpage",
+                    "name": "Ingredient",
                     "elementList": [
                         {
                             "type": "backbutton",
                         },
                         {
                             "type": "button",
-                            "name": "EditTask",
-                            "icon": "fa-tasks",
-                            "color": "green",
+                            "name": "ShowIngredient",
+                            "icon": "fa-apple",
+                            "color": "red",
+                            "width": 2,
                             "form": {
-                                "form": "TaskForm"
+                                "form": "IngredientForm"
                             }
                         },
                         {
                             "type": "list",
-                            "name": "PersonList",
-                            "icon": "fa-user",
+                            "name": "RecipeList",
+                            "icon": "fa-cutlery",
                             "color": "blue",
-                            "search": true,
-                            "url": "/task/:taskKey/person",
-                            "form": {
-                                "form": "PersonForm"
-                            }
-                        },
+                            "search": false,
+                            "url": "/ingredient/:ingredientKey/recipe",
+                            "page": "recipepage"
+                        }
                     ]
                 },
                 {
-                    "id": "elementspage",
-                    "name": "Elements",
+                    "id": "regionspage",
+                    "name": "Regionen",
                     "elementList": [
                         {
                             "type": "backbutton",
                         },
                         {
-                            "type": "button",
-                            "name": "InlineForm",
-                            "width": 2,
-                            "icon": "fa-forward",
-                            "color": "blue",
-                            "page": "inlineFormPage",
+                            "type": "list",
+                            "name": "RegionsList",
+                            "icon": "fa-globe",
+                            "color": "yellow",
+                            "search": false,
+                            "url": "/region",
+                            "page": "regionpage"
+                        }
+                    ]
+                },
+                {
+                    "id": "regionpage",
+                    "name": "Region",
+                    "elementList": [
+                        {
+                            "type": "backbutton",
                         },
                         {
-                            "type": "linkButton",
-                            "name": "www.google.com",
+                            "type": "list",
+                            "name": "RecipeList",
+                            "icon": "fa-cutlery",
+                            "color": "blue",
+                            "search": true,
+                            "url": "/region/:regionKey/recipe",
+                            "page": "recipepage"
+                        }
+                    ]
+                }
+            ],
+            "formList": [
+                {
+                    "id": "RecipeForm",
+                    "title": "Recipe",
+                    "url": "/recipe",
+                    "formFieldList": [
+                        {
+                            "id": "recipeName",
+                            "type": "text",
+                            "name": "RecipeName",
                             "width": 2,
-                            "icon": "fa-google",
-                            "color": "amethyst",
-                            "url": "http://www.google.com"
+                            "required": true
+                        },
+                        {
+                            "id": "preparationTime",
+                            "type": "number",
+                            "name": "PreparationtimeInMinutes",
+                            "width": 2,
+                            "required": true
+                        },
+                        {
+                            "id":   "region",
+                            "type": "autocomplete",
+                            "name": "Region",
+                            "wordSearchEnabled": true,
+                            "defaultKey": "regionKey",
+                            "form": "RegionForm",
+                            "url": "/region",
+                            "width": 2,
+                            "required": false
+                        },
+                        {
+                            "id": "recipe",
+                            "type": "text",
+                            "name": "Recipe",
+                            "width": 2,
+                            "height": 8,
+                            "maxLength": 50000,
+                            "required": true
                         },
                         {
                             "type": "deleteButton",
-                            "name": "Delete",
-                            "icon": "fa-user",
-                            "color": "red"
+                            "name": "Delete"
                         },
                         {
-                            "type": "list",
-                            "name": "LinkList",
-                            "icon": "fa-link",
-                            "color": "teal",
-                            "search": false,
-                            "url": "/company/link"
+                            "type": "cancelButton",
+                            "name": "Cancel"
                         },
+                        {
+                            "type": "okButton",
+                            "name": "Ok"
+                        }
                     ]
                 },
                 {
-                    "id": "inlineFormPage",
-                    "name": "Elements",
-                    "elementList": [
+                    "id": "IngredientForm",
+                    "title": "Ingredient",
+                    "url": "/ingredient",
+                    "formFieldList": [
                         {
-                            "type": "backbutton",
+                            "id": "name",
+                            "type": "text",
+                            "name": "IngredientName",
+                            "width": 2,
+                            "required": true
                         },
                         {
-                            "type": "inlineForm",
-                            "form": "InlineTestForm",
-                            "url": "/company"
+                            "id": "season",
+                            "type": "text",
+                            "name": "Season",
+                            "width": 2,
+                            "required": true
                         },
                         {
-                            "type": "list",
-                            "name": "LinkList",
-                            "icon": "fa-link",
-                            "color": "teal",
-                            "search": false,
-                            "url": "/company/link"
+                            "id": "calories",
+                            "type": "number",
+                            "name": "CaloriesPer100g",
+                            "width": 2,
+                            "required": true
                         },
                         {
-                            "type": "inlineForm",
-                            "form": "CompanyForm",
-                            "url": "/company"
+                            "type": "deleteButton",
+                            "name": "Delete"
                         },
                         {
-                            "type": "list",
-                            "name": "LinkList",
-                            "icon": "fa-link",
-                            "color": "teal",
-                            "search": false,
-                            "url": "/company/link"
+                            "type": "cancelButton",
+                            "name": "Cancel"
                         },
+                        {
+                            "type": "okButton",
+                            "name": "Ok"
+                        }
                     ]
                 },
+                {
+                    "id": "RegionForm",
+                    "title": "Region",
+                    "url": "/region",
+                    "formFieldList": [
+                        {
+                            "id": "name",
+                            "type": "autocomplete",
+                            "name": "Region",
+                            "width": 2,
+                            "wordSearchEnabled": true,
+                            "defaultKey": "regionKey",
+                            "form": "RegionForm",
+                            "url": "/region",
+                            "required": true
+                        },
+                        {
+                            "type": "deleteButton",
+                            "name": "Delete"
+                        },
+                        {
+                            "type": "cancelButton",
+                            "name": "Cancel"
+                        },
+                        {
+                            "type": "okButton",
+                            "name": "Ok"
+                        }
+                    ]
+                },
+                {
+                    "id": "AddIngredientForm",
+                    "title": "Ingredient",
+                    "url": "/recipe/:recipeKey/ingredient",
+                    "formFieldList": [
+                        {
+                            "id": "ingredientKey",
+                            "type": "autocomplete",
+                            "name": "Ingredient",
+                            "wordSearchEnabled": true,
+                            "form": "IngredientForm",
+                            "url": "/ingredient",
+                            "width": 2,
+                            "required": true,
+                            "defaultKey": "ingredientKey"
+                        },
+                        {
+                            "id": "recipeKey",
+                            "type": "autocomplete",
+                            "name": "Recipe",
+                            "wordSearchEnabled": true,
+                            "url": "/recipe",
+                            "width": 2,
+                            "required": true,
+                            "readonly": true,
+                            "defaultKey": "recipeKey"
+                        },
+                        {
+                            "type": "deleteButton",
+                            "name": "Delete"
+                        },
+                        {
+                            "type": "cancelButton",
+                            "name": "Cancel"
+                        },
+                        {
+                            "type": "okButton",
+                            "name": "Ok"
+                        }
+                    ]
+                }
             ]
         }
     };
