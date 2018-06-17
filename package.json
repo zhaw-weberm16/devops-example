@@ -1,25 +1,23 @@
 {
-  "name": "devops-example",
-  "version": "0.2.15",
-  "description": "DevOps Example",
+  "name": "Recipes",
+  "version": "1.0.0",
+  "description": "Recipes Application",
   "keywords": [
+    "Recipes",
     "GUI",
     "JSON",
     "REST",
     "Rapid Application Development",
     "Rapid Application Manufacturing"
   ],
-  "homepage": "https://github.com/innovad/devops-example/",
-  "bugs": {
-    "url": "https://github.com/innovad/devops-example/issues"
-  },
+  "homepage": "https://github.com/zhaw-weberm16/devops-example/",
   "license": "LGPL-3.0",
   "author": {
-    "name": "Adrian Moser"
+    "name": "Manuel Weber"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/innovad/devops-example.git"
+    "url": "https://github.com/zhaw-weberm16/devops-example.git"
   },
   "engines": {
     "node": "7.10.1",
@@ -36,7 +34,7 @@
   },
   "dependencies": {
     "body-parser": "1.15.2",
-    "path-framework": "0.2.15",
+    "path-framework-weberm16": "1.1.5",
     "pouchdb-core": "6.3.4",
     "pouchdb-adapter-memory": "6.3.4",
     "express": "4.15.0"
